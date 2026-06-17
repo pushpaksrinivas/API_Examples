@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <style>
+        img{
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>Roll Dice</h1>
+    <h2>Dice: </h2> <h3 id="value"></h3>
+    <img src="https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-one.svg" alt="" style="height: 100px;" id="diceimg">
+    <br>
+    <button onclick="dice()">Roll</button>
+
+    <script>
+
+        
+        function dice(){
+            let dic = Math.floor(Math.random()*6)+1;
+            let dicev = document.getElementById("diceimg")
+            let dival = document.getElementById("value")
+            if(dic===1){
+                dicev.src = "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-one.svg"
+                dival.innerHTML= dic
+            } else if(dic===2){
+                dicev.src = "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-two.svg"
+                dival.innerHTML= dic
+            }  else if(dic===3){
+                dicev.src = "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-three.svg"
+                dival.innerHTML= dic
+            } else if(dic===4){
+                dicev.src = "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-four.svg"
+                dival.innerHTML= dic
+            } else if(dic===5){
+                dicev.src = "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-five.svg"
+                dival.innerHTML= dic
+            } else {
+                dicev.src = "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-six.svg"
+                dival.innerHTML= dic
+            }
+            
+        }
+    </script>
+
+</body>
+</html>
